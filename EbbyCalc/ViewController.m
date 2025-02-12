@@ -23,6 +23,7 @@
 
 #import "ViewController.h"
 
+#import "EWCAudio.h"
 #import "EWCGridLayoutView.h"
 #import "EWCRoundedCornerButton.h"
 #import "EWCCalculator.h"
@@ -1308,6 +1309,8 @@ static const EWCLayoutConstants s_tallLayoutConstants = {
  */
 - (void)playSoundForKey:(EWCCalculatorKey)key {
   if (_playKeyClicks) {
+    EWCAudio *audio = [EWCAudio new];
+    [audio config];
     AVAudioPlayer *player = [self ensureSoundIdForKey:key];
     player.volume = s_soundVolume;
     [player play];

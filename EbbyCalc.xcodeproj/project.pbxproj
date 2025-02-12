@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		FD22A9DF237D1BBE003E2C74 /* icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = FD22A9D1237D1BBE003E2C74 /* icon152.png */; };
 		FD22A9E0237D1BBE003E2C74 /* icon20.png in Resources */ = {isa = PBXBuildFile; fileRef = FD22A9D2237D1BBE003E2C74 /* icon20.png */; };
 		FD22A9E1237D1BBE003E2C74 /* icon180.png in Resources */ = {isa = PBXBuildFile; fileRef = FD22A9D3237D1BBE003E2C74 /* icon180.png */; };
+		FD5743652D5C587E00A22A7C /* EWCAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5743642D5C587E00A22A7C /* EWCAudio.m */; };
 		FD5F2D902385CDBE0045B1AD /* EWCGridLayoutProps.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2D8F2385CDBE0045B1AD /* EWCGridLayoutProps.m */; };
 		FD5F2D922385D00A0045B1AD /* EWCGridCustomLayoutCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2D912385D00A0045B1AD /* EWCGridCustomLayoutCallback.m */; };
 		FD5F2D952388C5E70045B1AD /* EWCTokenQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2D942388C5E70045B1AD /* EWCTokenQueue.m */; };
@@ -86,6 +87,8 @@
 		FD22A9D2237D1BBE003E2C74 /* icon20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon20.png; sourceTree = "<group>"; };
 		FD22A9D3237D1BBE003E2C74 /* icon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon180.png; sourceTree = "<group>"; };
 		FD22A9E2237E14B5003E2C74 /* EbbyCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EbbyCalc.entitlements; sourceTree = "<group>"; };
+		FD5743632D5C587E00A22A7C /* EWCAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCAudio.h; sourceTree = "<group>"; };
+		FD5743642D5C587E00A22A7C /* EWCAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCAudio.m; sourceTree = "<group>"; };
 		FD5F2D8E2385CDBE0045B1AD /* EWCGridLayoutProps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCGridLayoutProps.h; sourceTree = "<group>"; };
 		FD5F2D8F2385CDBE0045B1AD /* EWCGridLayoutProps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCGridLayoutProps.m; sourceTree = "<group>"; };
 		FD5F2D912385D00A0045B1AD /* EWCGridCustomLayoutCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCGridCustomLayoutCallback.m; sourceTree = "<group>"; };
@@ -175,6 +178,15 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		FD57436C2D5C599400A22A7C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				FD5743632D5C587E00A22A7C /* EWCAudio.h */,
+				FD5743642D5C587E00A22A7C /* EWCAudio.m */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 		FD5F2E302391D4C70045B1AD /* audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 				FDC1A50223778A4A00D21FEB /* Controls */,
 				FDC1A50323778A8300D21FEB /* Calculator */,
 				FDC1A50423778AD500D21FEB /* Extensions */,
+				FD57436C2D5C599400A22A7C /* Audio */,
 				FDC1A4F72376817B00D21FEB /* EWCCalculatorUserDefaultsData.h */,
 				FDC1A4F82376817B00D21FEB /* EWCCalculatorUserDefaultsData.m */,
 				FD5F2E2023905B1A0045B1AD /* EWCKeyCommandCalculatorRecord.h */,
@@ -345,7 +358,8 @@
 		FDBA3EA9236CC30200780234 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Ansel Rognlie";
 				TargetAttributes = {
 					FDBA3EB0236CC30200780234 = {
@@ -428,6 +442,7 @@
 				FD22A9A2237CE767003E2C74 /* EWCCopyableLabel.m in Sources */,
 				FDC1A4CF2371349B00D21FEB /* EWCNumericField.m in Sources */,
 				FDBA3EB6236CC30200780234 /* AppDelegate.m in Sources */,
+				FD5743652D5C587E00A22A7C /* EWCAudio.m in Sources */,
 				FDC1A4F92376817B00D21FEB /* EWCCalculatorUserDefaultsData.m in Sources */,
 				FDC1A501237784A200D21FEB /* EWCRoundedCornerButton.m in Sources */,
 				FD5F2D952388C5E70045B1AD /* EWCTokenQueue.m in Sources */,
@@ -529,6 +544,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -589,6 +605,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -619,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.EbbyCalc;
 				PRODUCT_NAME = EbbyCalc;
 				SUPPORTS_MACCATALYST = NO;
@@ -641,7 +658,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.EbbyCalc;
 				PRODUCT_NAME = EbbyCalc;
 				SUPPORTS_MACCATALYST = NO;

@@ -34,7 +34,7 @@
 			<key>Key</key>
 			<string>version_preference</string>
 			<key>DefaultValue</key>
-			<string>1.0.1.200</string>
+			<string>1.0.3</string>
 		</dict>
 		<dict>
 			<key>Type</key>
